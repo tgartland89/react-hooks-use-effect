@@ -6,9 +6,13 @@ function App() {
 
 
   useEffect(() => {
-    console.log("useEffect called");
-  });
+    document.title= text
+  }, [text]) 
 
+  useEffect(() => {
+    setTimeout(() => setCount(0), 5000)
+  }, [])
+  
   console.log("Component rendering");
 
   return (
